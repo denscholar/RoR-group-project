@@ -77,5 +77,9 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'cancancan'
 gem 'cssbundling-rails'
 gem 'devise'
+gem 'rails-controller-testing'
+gem 'rspec-rails'

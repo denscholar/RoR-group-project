@@ -1,0 +1,28 @@
+
+<header>
+<nav class="bg-indigo-700 shadow-lg">
+<div class="container mx-auto">
+<div class="sm:flex justify-center">
+
+<!-- site title -->
+<%= link_to 'Recipe App', root_path,  class: "text-white text-3xl font-bold p3" %>
+
+<!-- menu item -->
+<ul class="text-gray-400 sm:self-center text-xl.border-t.sm:border-none">
+      <li class="sm:inline-block"> <%= link_to 'Foods', user_foods_path(current_user.id), :class => "p-3 hover:text-white" %> </li>
+      <li class="sm:inline-block"> <%= link_to 'My Recipes', user_recipes_path(user_id: current_user.id), :class =>"p-3 hover:text-white" %></li> 
+      <li class="sm:inline-block"> <%= link_to 'Public recipes', root_path %></li> 
+      <li class="sm:inline-block"> <%= link_to 'New recipe', new_user_recipe_path(user_id: current_user.id), :class => "p-3 hover:text-white" %></li> 
+	  <li class="sm:inline-block"><%= link_to "Hi, #{current_user.email}", edit_user_registration_path,  :class =>"p-3 hover:text-white" %></li>
+      <li class="sm:inline-block"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, :class => "p-3 hover:text-white" %></li>
+</ul>
+
+
+</div>
+</div>
+</nav>
+
+
+
+
+</header>

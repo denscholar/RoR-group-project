@@ -1,0 +1,40 @@
+<div class="my-8 w-3/5" >
+<div class="flex justify-center">
+<h2 class="text-lg font-bold"> Foods </h2>
+</div>
+<br>
+<div class="flex justify-end">
+<%= link_to 'New food', new_user_food_path(current_user.id), :class => "inline px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %> 
+</div>
+<br>
+<div class="flex justify-center">
+<table class="w-4/5 border text-center ">
+  <thead>
+    <tr>
+      <th scope="col">Food</th>
+      <th scope="col">Measurement Unit</th>
+      <th scope="col">Price</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_user.foods.each do |food| %>
+      <tr class="odd:bg-white even:bg-slate-50">
+        <td class="border text-lg"><%= food.name %></td>
+        <td class="border text-lg"><%= food.measurement_unit %></td>
+        <td class="border text-lg"><%= food.price %></td>
+        <td class="border text-lg"><%= button_to "Delete Food", user_food_path(current_user.id, food.id), method: :delete, 
+              data: {confirm: 'Are you sure?'}, :class => "inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out" %> </td>
+            
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+    
+
+
+
+
