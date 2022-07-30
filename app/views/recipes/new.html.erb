@@ -1,3 +1,97 @@
-<h1>Add a new recipe</h1>
 
-<%= render partial: "form"%>
+<div class="block p-6 rounded-lg shadow-lg bg-white w-2/5">
+<h2 class="font-bold text-xl text-center"> Create a new recipe</h2>
+  <%= form_with(model: @recipe, url: user_recipes_url(current_user.id)) do |f| %>
+  
+    <div class="form-group mb-6">
+      <%= f.label :name %> 
+      <%= f.text_field :name, placeholder: "Name", autofocus: true , :class => "form-control block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"%>
+    </div>
+
+    <div class="form-group mb-6">
+      <%= f.label :description %> 
+      <%= f.text_area :description, rows: 4,  placeholder: "Description", autofocus: true,  :class => "
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      " %>
+    </div>
+
+     <div class="form-group mb-6">
+      <%= f.label "Preparation time (min):" %> 
+      <%= f.number_field :preparation_time, autofocus: true, class: "
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      " %>
+    </div>
+
+     <div class="form-group mb-6">
+      <%= f.label "Cooking time (min):" %> 
+      <%= f.number_field :cooking_time, autofocus: true, class: "
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      " %>
+    </div>
+
+     <div class="form-group mb-6">
+      <%= f.label "Public:" , :class => "form-check-label inline-block text-gray-800" %> 
+      <%= f.check_box :public, autofocus: true, :class => "form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer" %>
+    </div>
+    
+     <div class="form-group mb-6 flex justify-center">
+      <%= f.submit :class => "inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
+    </div>
+
+  <% end %>
+</div> 
