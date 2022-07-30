@@ -34,4 +34,11 @@ Rails.application.routes.draw do
   end
 
 
+<<<<<<< HEAD
+=======
+  # Defines the root path route ("/")
+  root 'users#index'
+
+  resources :recipes 
+>>>>>>> f82e9303b3b16f4a4bf8828758093c005f94c5ee
 end
