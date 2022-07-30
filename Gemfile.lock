@@ -112,7 +112,11 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+<<<<<<< HEAD
     json (2.6.1)
+=======
+    json (2.6.2)
+>>>>>>> f82e9303b3b16f4a4bf8828758093c005f94c5ee
     launchy (2.5.0)
       addressable (~> 2.7)
     letter_opener (1.8.1)
@@ -145,10 +149,16 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
+<<<<<<< HEAD
+=======
+    pg (1.4.1)
+>>>>>>> f82e9303b3b16f4a4bf8828758093c005f94c5ee
     pg (1.4.1-x64-mingw-ucrt)
     public_suffix (4.0.7)
     puma (5.6.4)
@@ -253,6 +263,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
